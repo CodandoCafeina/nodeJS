@@ -1,0 +1,24 @@
+create user 'bruno'@'localhost' identified by '123456';//cria o usuario bruno com a senha 123456
+grant all privileges on * . * to 'bruno'@'localhost';//da todas as permissões para o usuario bruno
+drop user 'bruno'@'localhost';//exlcui o usuario
+
+mysql -u "usuario" -p "senha";
+
+mysql show databases; //mostra os bancos de dado
+mysql create database sambox; //cria o banco de dados com nome sambox
+use sambox;//seleciona o banco de dados sambox
+drop database sambox;//exclui o banco de dados
+
+show tables;//mostra todas as tabelas do banco de dados selecionado
+create table usuario(nome char(10) not null, senha int(10) not null);//cria a tabela com os atributos nome e senha
+insert into usuario(nome, senha) values("Bruno", "1234567");//salva as informações na tabela usuario com os valores passados
+drop table usuario;//exclui a tabela usuario
+
+select * from sambox.usuario;// mostra todas as informações salvas no banco sambox tabela usuario
+select senha from usuario;//mostra apenas as senhas da tabela usuario
+select * from usuario order by nome asc;//mostra todos os registros da tabela usuario ordenado pelo nome  de a-z
+
+update usuario set nome=”Bruno henrique” where codigo=1;//atualiza o nome do registro que tenha codigo 1 
+delete from usuario where codigo=3;//exclui o registro com o codigo 3
+//where serve como especificador 
+
