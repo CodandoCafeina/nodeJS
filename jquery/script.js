@@ -81,32 +81,66 @@ img = $('<img/>', {
 	});
 
 	$('img').css('height'); = pega o valor do elemento
-	$('img').innerWidth(); = LARGURA da imagem total
+	$('img').innerWidth(); = LARGURA da imagem
 	$('img').outerWidth(); = LARGURA total da imagem e borda
 
 */
-/*	
-	EVENTO MOUSE
-
-	$('img').click() = evento de CLICK 
-	$('img').dblclick() = evento de CLICK DUPLO
-	$('img').mouseover(); = evento de PASSAR o mause
-	$('img').mouseout(); = evento de TIRAR o mause
-	$('img').mousedown(); = evento de PRECIONAMENTO
-	$('img').mouseup(); = evento de DESPRECIONAR
-	$('img').mousemove(); = POSIÇÃO do MOUSE dentro do elemento
+/*
+	MANIPULANDO EVENTOS
+	
+	$('img').on('evento', function());
+	.on('click') = CLICK
+	.on('dbclick') = CLICK DUPLO
+	.on('mouseover') = PASSAR MOUSE
+	.on('mouseout') = TIRAR O MOUSE
+	.on('mousedown') = MANTER PRECIONADO
+	.on('mouseup') = DESPRECIONAR
+	.on('mousemove') = POSIÇÃO DO MOUSE
 
 	EVENTO TECLADO
-	
-	$('img').keyup(); = RECUPERA e REESCREVE oque foi passado
-	$('img').keydown(); = recupera mas não atualiza
-	$('img').focus(); = foca no elemento
-	$('img').blur(); = remove o focu quando tira o mouse
+	.on('keyup') = RECUPERA E REESCREVE
+	.on('keydown') = RECUPERA MAIS NÃO ATUALIZA
+	.on('focus') = FOCAR O ELEMENTO
+	.on('blur') = REMOVE O FOCU QUANDO TIRA O MOUSE
 
 	EVENTO FORMULARIO
 
 	$('from').submit(); validar formulario
 	$(':select').change(); verifica alteração
-	$('testarea').select(); verifica seleção de algo
+	$('textarea').select(); verifica seleção de algo
+
+*/
+/*	EFEITOS
+
+	$('img').hide(3000); ESCONDE ELEMENTO ('slow, normal, fast')
+	$('img').show(); MOSTRA ELEMENTO
+	$('img').toggle(); ALTERNA ENTRE MOSTRAR E ESCONDER
+
+		OPACITY
+
+	$('div').fadeOut(1000); SOME  ELEMENTO
+	$('div').fadeIn(1000);	MOSTRA ELEMENTO
+	$('div').fadeTo(1000, 0.3); INTENCIDADE OPACITY	
+	$('div').fadeToggle(1000);	ALTERNA EM MOSTRAR E SUMIR
+
+		SLIDE
+		
+	$('div').slideUp(1000); SLIDE baixo para cima 
+	$('div').slideDown(1000);	SLIDE cima para baixo
+	$('div').slideToggle(1000);	ALTERNA
+
+*/
+/*	FORMULARIO
+
+	MARCAR OU DESMARCAR CHECKBOX
+	$('.toogle').change(function(){
+		//se estiver marcado selecione todos os checkbox
+		if(this.checked){
+			$(':checkbox[name=tecnologia').attr('checked', 'checked');
+		}else{
+			//desmarca todos os checkebox com name tecnologia
+			$(':checkbox[name=tecnologia').removeAttr('checked');			
+		}
+	})
 
 */
